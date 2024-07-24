@@ -1,0 +1,879 @@
+  [
+    {
+    "patterns": ["hai", "hallo", "hi", "halo", "hei", "pagi", "siang", "sore", "malam", "selamat pagi", "selamat siang", "selamat sore", "selamat malam", "halo teman"],
+    "intent": "greeting",
+    "response": ["Ada yang perlu saya bantu, tentang kesehatan mental depresi?", "Selamat datang! Bagaimana saya bisa membantu Anda hari ini?", "Hai! Ada yang ingin Anda tanyakan tentang kesehatan mental?", "Halo! Apa yang bisa saya bantu?", "Selamat datang di sini! Apakah ada yang bisa saya bantu?"]
+  },
+  {
+    "patterns": ["Goodbye", "sampai jumpa lagi", "Bye", "Take care", "Sampai jumpa", "Selamat tinggal", "Dadah", "Sampai nanti", "Hati-hati di jalan", "Sampai bertemu lagi"],
+    "intent": "goodbye",
+    "response": ["Selamat tinggal! Jaga kesehatan Anda!", "Sampai jumpa! Semoga hari Anda menyenangkan!", "Dadah! Jangan ragu untuk kembali jika ada pertanyaan lain.", "Selamat tinggal! Semoga harimu baik-baik saja!", "Sampai bertemu lagi! Jaga diri baik-baik."]
+  },
+  {
+    "patterns": ["Apa gejala-gejala depresi?", "Apa saja tanda-tanda depresi?", "Bagaimana saya tahu jika saya depresi?", "Gejala apa yang menunjukkan depresi?", "Tanda-tanda depresi itu apa?"],
+    "intent": "pertanyaan_informasi",
+    "response": [
+      "Gejala depresi terbagi menjadi dua yaitu gejala utama dan gejala lainnya. Gejala utama meliputi perasaan sedih yang berkepanjangan, murung, gelisah, kehilangan minat atau kesenangan beraktivitas, berkurangnya energi, mudah lelah, dan menurunnya aktivitas. Gejala lainnya terdiri dari berkurangnya konsentrasi, harga diri, kepercayaan diri, sering merasa bersalah dan tidak berguna, pesimis akan masa depan yang suram, gagasan tentang rasa ingin bunuh diri, dan nafsu makan berkurang.",
+      "Gejala utama depresi meliputi perasaan sedih terus-menerus, kehilangan minat, dan penurunan energi. Gejala lainnya termasuk konsentrasi yang menurun, harga diri rendah, dan pikiran untuk bunuh diri.",
+      "Tanda-tanda depresi mencakup perasaan sedih, kurang energi, dan kehilangan minat dalam aktivitas sehari-hari. Gejala lainnya bisa berupa perubahan nafsu makan, gangguan tidur, dan rasa bersalah berlebihan.",
+      "Depresi sering ditandai dengan perasaan murung yang berkepanjangan, kehilangan minat, dan kelelahan. Gejala tambahan bisa mencakup penurunan konsentrasi, kepercayaan diri rendah, dan pikiran negatif tentang masa depan.",
+      "Jika Anda mengalami perasaan sedih yang berkepanjangan, kehilangan minat dalam aktivitas, dan merasa lelah sepanjang waktu, itu mungkin tanda-tanda depresi. Gejala lainnya termasuk kesulitan berkonsentrasi, merasa tidak berharga, dan perubahan nafsu makan."
+    ]
+  },
+  {
+    "patterns": ["Bagaimana cara mengatasi depresi?", "Apa yang bisa saya lakukan untuk melawan depresi?", "Cara efektif untuk mengatasi depresi?", "Bagaimana cara menghadapi depresi?", "Apa solusi untuk depresi?"],
+    "intent": "pertanyaan_solusi",
+    "response": [
+      "Untuk mengatasi depresi, penting untuk mencari bantuan dari profesional kesehatan mental seperti dokter atau terapis yang dapat menyarankan terapi kognitif perilaku (CBT) atau obat-obatan sesuai kebutuhan. Dukungan sosial dari teman atau keluarga juga penting, sambil menjaga gaya hidup sehat dengan pola makan teratur, tidur yang cukup, dan olahraga. Menghindari alkohol dan narkoba serta menjaga harapan dan kesabaran dalam proses adalah langkah tambahan yang penting untuk memperbaiki kondisi depresi.",
+      "Mengatasi depresi melibatkan konsultasi dengan profesional kesehatan mental untuk terapi dan/atau obat-obatan, dukungan sosial, dan menjaga gaya hidup sehat melalui diet, tidur yang cukup, dan olahraga.",
+      "Langkah-langkah untuk mengatasi depresi termasuk terapi kognitif perilaku (CBT), dukungan dari keluarga dan teman, serta menjaga gaya hidup sehat dengan pola makan, tidur, dan olahraga yang baik.",
+      "Mencari bantuan dari profesional kesehatan mental, menerima dukungan sosial, menjaga pola hidup sehat, dan menghindari alkohol dan narkoba adalah beberapa cara efektif untuk mengatasi depresi.",
+      "Untuk menghadapi depresi, penting untuk mencari terapi dari profesional kesehatan mental, mendapatkan dukungan sosial, menjaga gaya hidup sehat, dan tetap sabar dalam proses pemulihan."
+    ]
+  },
+  {
+    "patterns": ["apa itu kesehatan mental?", "definisi kesehatan mental?", "kesehatan mental itu apa?", "Apa yang dimaksud dengan kesehatan mental?"],
+    "intent": "pertanyaan_informasi",
+    "response": ["Kesehatan mental adalah keadaan kesejahteraan di mana seseorang menyadari potensinya sendiri, dapat mengatasi tekanan hidup yang normal, dapat bekerja secara produktif dan bermanfaat, serta mampu memberikan kontribusi kepada komunitasnya.", "Kesehatan mental mengacu pada kesejahteraan emosional, psikologis, dan sosial seseorang. Ini mempengaruhi cara berpikir, merasakan, dan bertindak dalam menghadapi kehidupan.", "Kesehatan mental mencakup kesejahteraan emosional, psikologis, dan sosial, dan penting untuk kemampuan kita mengatasi stres, berhubungan dengan orang lain, dan membuat keputusan."]
+  },
+  {
+    "patterns": ["Saya sering merasa gelisah dan tidak bisa tenang."],
+    "intent": "diagnosa_GU1",
+    "response": ["Rasa gelisah yang berlebihan bisa menjadi tanda gangguan kecemasan atau depresi. Sudah berapa lama Anda merasa seperti ini?", "Gelisah yang berlebihan dapat mempengaruhi kualitas hidup. Apakah ada hal tertentu yang memicu perasaan gelisah Anda?", "Merasa gelisah terus-menerus bisa menjadi tanda gangguan depresi. Apakah Anda mengalami kesulitan tidur atau perubahan nafsu makan?", "Cobalah teknik relaksasi seperti meditasi atau pernapasan dalam untuk membantu menenangkan diri. Jika perasaan ini berlanjut, penting untuk berbicara dengan profesional kesehatan mental.", "Penting untuk memahami penyebab kegelisahan Anda. Apakah ada peristiwa atau situasi tertentu yang membuat Anda merasa seperti ini? Berbicara dengan seorang profesional bisa sangat membantu."]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan afek depresif?"],
+    "intent": "pertanyaan_informasi_GU1",
+    "response": ["Afek depresif merujuk pada perasaan atau emosi yang terkait dengan kondisi depresi. Ini mencakup perasaan sedih yang mendalam, murung yang berkepanjangan, dan gelisah yang terus menerus."]
+  },
+  {
+    "patterns": ["Apa saja jenis perasaan atau emosi yang termasuk dalam afek depresif?"],
+    "intent": "pertanyaan_informasi_GU1",
+    "response": ["Afek depresif mencakup perasaan sedih yang berat, rasa kehilangan yang mendalam, kekosongan emosional, kecemasan yang menetap, serta perasaan putus asa atau tidak berarti."]
+  },
+  {
+    "patterns": ["Bagaimana afek depresif mempengaruhi perilaku seseorang?"],
+    "intent": "pertanyaan_informasi_GU1",
+    "response": ["Afek depresif dapat mengurangi motivasi untuk beraktivitas, menyebabkan isolasi sosial, mempengaruhi kebiasaan tidur dan makan, serta menurunkan minat pada aktivitas yang sebelumnya disukai."]
+  },
+  {
+    "patterns": ["Apakah semua orang dengan afek depresif mengalami gejala yang sama?"],
+    "intent": "pertanyaan_informasi_GU1",
+    "response": ["Tidak, gejala afek depresif dapat bervariasi antara individu, tetapi umumnya mencakup kombinasi dari perasaan sedih yang mendalam, kecemasan yang menetap, dan penurunan minat dalam aktivitas sehari-hari."]
+  },
+  {
+    "patterns": ["Bagaimana cara mengidentifikasi afek depresif pada diri sendiri atau orang lain?"],
+    "intent": "Pertanyaan_informasi_GU1",
+    "response": ["Mengidentifikasi afek depresif melibatkan pengamatan terhadap perubahan dalam pola tidur, makan, minat pada aktivitas, serta penilaian terhadap perubahan emosi yang signifikan seperti rasa sedih yang mendalam dan perasaan tidak berarti."]
+  },
+  {
+    "patterns": ["Apakah terapi atau pengobatan tersedia untuk mengelola afek depresif?."],
+    "intent": "Pertanyaan_informasi_GU1",
+    "response": ["Ya, terapi psikologis seperti kognitif perilaku dan terapi obat-obatan dapat membantu mengelola afek depresif. Penting untuk berkonsultasi dengan profesional kesehatan mental untuk penanganan yang tepat."]
+  },
+  {
+    "patterns": ["Apakah afek depresif bisa bersifat sementara atau cenderung kronis?"],
+    "intent": "pertanyaan_informasi_GU1",
+    "response": ["Afek depresif bisa bersifat sementara tergantung pada faktor-faktor pemicu, seperti stres akut atau peristiwa kehidupan tertentu. Namun, jika tidak diobati atau tidak ditangani dengan baik, dapat berkembang menjadi kondisi kronis yang memerlukan perawatan jangka panjang."]
+  },
+  {
+    "patterns": ["Bagaimana dukungan sosial dapat membantu dalam mengatasi afek depresif?"],
+    "intent": "pertanyaan_informasi_GU1",
+    "response": ["Dukungan sosial dapat memberikan dukungan emosional, praktis, dan sosial yang penting dalam menghadapi afek depresif. Ini termasuk dukungan dari keluarga, teman, dan kelompok dukungan."]
+  },
+  {
+    "patterns": ["Apakah perubahan gaya hidup dapat mempengaruhi afek depresif?"],
+    "intent": "pertanyaan_informasi_GU1",
+    "response": ["Ya, perubahan gaya hidup seperti rutin olahraga, pola makan sehat, manajemen stres, serta tidur yang cukup dapat membantu mengurangi gejala afek depresif dan meningkatkan kesejahteraan emosional."]
+  },
+  {
+    "patterns": ["Bagaimana afek depresif mempengaruhi produktivitas kerja atau sekolah seseorang?"],
+    "intent": "pertanyaan_informasi_GU1",
+    "response": ["Afek depresif dapat mengurangi konsentrasi, motivasi, dan energi untuk bekerja atau belajar, yang pada gilirannya dapat mengganggu produktivitas dan pencapaian tujuan."]
+  },
+  {
+    "patterns": ["ibu Saya akhir akhir ini sering merasa gelisah dan murung."],
+    "intent": "diagnosa_GU1",
+    "response": ["murung dan Gelisah yang berlebihan bisa menjadi tanda gangguan depresi. Cobalah teknik relaksasi dan pertimbangkan untuk berbicara dengan profesional kesehatan mental."]
+  },
+  {
+    "patterns": ["Saya merasa sangat sedih tanpa alasan yang jelas."],
+    "intent": "diagnosa_GU1",
+    "response": ["Perasaan sedih tanpa alasan yang jelas bisa menjadi tanda depresi. Sebaiknya Anda berkonsultasi dengan profesional kesehatan untuk evaluasi lebih lanjut."]
+  },
+  {
+    "patterns": ["Saya sering merasa gelisah dan tidak bisa tidur."],
+    "intent": "diagnosa_GU1_G6",
+    "response": ["Gelisah dan gangguan tidur bisa menjadi tanda gangguan kecemasan. Cobalah teknik relaksasi dan pertimbangkan untuk berbicara dengan profesional kesehatan mental."]
+  },
+  {
+    "patterns": ["Saya merasa sangat sedih hampir setiap hari. Tidak ada hal yang membuat saya bahagia lagi, bahkan hal-hal yang dulu saya nikmati. Saya tidak tahu harus bagaimana lagi."],
+    "intent": "diagnosa_GU1_GU2",
+    "response": ["Saya mengerti bahwa Anda merasa sangat sedih dan kehilangan minat pada hal-hal yang biasanya Anda nikmati. Ini adalah tanda umum dari depresi. Langkah pertama yang baik adalah berbicara dengan seorang profesional seperti saya. Mari kita diskusikan lebih lanjut tentang perasaan Anda dan coba cari tahu apa yang bisa kita lakukan untuk membantu Anda merasa lebih baik. Ada berbagai jenis terapi dan, jika diperlukan, pengobatan yang dapat membantu Anda merasa lebih baik."]
+  },
+  {
+    "patterns": ["Saya merasa sangat gelisah dan tidak bisa tenang. Pikiran saya selalu berlarian dan saya sulit tidur karenanya. Rasanya seperti ada sesuatu yang buruk akan terjadi, tetapi saya tidak tahu apa."],
+    "intent": "diagnosa_GU1_G6_G1",
+    "response": ["Kegelisahan yang Anda rasakan adalah gejala umum dari depresi dan kecemasan. Ini bisa sangat melelahkan dan mengganggu kehidupan sehari-hari Anda. Penting untuk mencari cara untuk mengelola kegelisahan ini. Kami bisa mencoba beberapa teknik relaksasi, seperti latihan pernapasan atau meditasi, dan juga mempertimbangkan terapi kognitif perilaku yang dapat membantu Anda mengubah pola pikir yang menyebabkan kegelisahan."]
+  },
+  {
+    "patterns": ["Saya sering merasa murung dan tidak punya energi untuk melakukan apa pun. Setiap hari terasa seperti beban yang berat dan saya kesulitan untuk bangun dari tempat tidur."],
+    "intent": "diagnosa_GU1_GU3",
+    "response": ["Rasa murung dan kelelahan yang Anda rasakan adalah gejala yang sangat utama pada depresi. Ini bisa sangat melemahkan dan membuat sulit untuk menjalani hari-hari Anda. Penting untuk memulai dengan langkah-langkah kecil untuk merawat diri sendiri. Misalnya, kita bisa mencoba membuat jadwal harian yang sederhana dan realistis, serta membicarakan tentang cara-cara untuk meningkatkan energi Anda, baik melalui pola makan, olahraga ringan, atau perawatan medis yang mungkin diperlukan."]
+  },
+  {
+    "patterns": ["Saya sering merasa gelisah dan tidak bisa tidur."],
+    "intent": "diagnosa_GU1",
+    "response": ["Gelisah dan gangguan tidur bisa menjadi tanda gangguan kecemasan. Cobalah teknik relaksasi dan pertimbangkan untuk berbicara dengan profesional kesehatan mental."]
+  },
+  {
+    "patterns": ["Saya merasa sangat sedih tanpa alasan yang jelas."],
+    "intent": "diagnosa_GU1",
+    "response": ["Perasaan sedih tanpa alasan yang jelas bisa menjadi tanda depresi. Sebaiknya Anda berkonsultasi dengan profesional kesehatan untuk evaluasi lebih lanjut."]
+  },
+  {
+    "patterns": ["Saya sering merasa gelisah dan tidak bisa tidur."],
+    "intent": "diagnosa_GU1",
+    "response": ["Gelisah dan gangguan tidur bisa menjadi tanda gangguan kecemasan. Cobalah teknik relaksasi dan pertimbangkan untuk berbicara dengan profesional kesehatan mental."]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan kehilangan minat?"],
+    "intent": "pertanyaan_infomasi_GU2",
+    "response": ["Kehilangan minat merujuk pada keadaan di mana seseorang tidak lagi merasa tertarik atau termotivasi untuk melakukan aktivitas yang sebelumnya mereka nikmati. Ini bisa mencakup hobi, pekerjaan, atau interaksi sosial."]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan kehilangan kegembiraan?"],
+    "intent": "pertanyaan_infomasi_GU2",
+    "response": ["Kehilangan kegembiraan berarti seseorang tidak lagi merasakan kebahagiaan atau kesenangan dalam aktivitas atau peristiwa yang biasanya membuat mereka bahagia. Ini dapat menyebabkan perasaan datar atau tidak bersemangat terhadap hal-hal yang biasanya menyenangkan."]
+  },
+  {
+    "patterns": ["Apa saja penyebab umum dari kehilangan minat dan kegembiraan?"],
+    "intent": "pertanyaan_informasi_GU2",
+    "response": ["Penyebab umum termasuk kondisi mental seperti depresi, stres kronis, kelelahan, masalah kesehatan fisik, perubahan besar dalam hidup, atau efek samping dari obat-obatan tertentu."]
+  },
+  {
+    "patterns": ["Apa saja penyebab umum dari kehilangan minat dan kegembiraan?"],
+    "intent": "pertanyaan_informasi_GU2",
+    "response": ["Penyebab umum termasuk kondisi mental seperti depresi, stres kronis, kelelahan, masalah kesehatan fisik, perubahan besar dalam hidup, atau efek samping dari obat-obatan tertentu."]
+  },
+  {
+    "patterns": ["Bagaimana kehilangan minat dan kegembiraan mempengaruhi kehidupan sehari-hari seseorang?"],
+    "intent": "pertanyaan_informasi_GU2",
+    "response": ["Kehilangan minat dan kegembiraan dapat mengurangi keterlibatan dalam aktivitas sosial, menurunkan produktivitas di tempat kerja atau sekolah, serta mempengaruhi hubungan pribadi dan kualitas hidup secara keseluruhan."]
+  },
+  {
+    "patterns": ["Apa tanda-tanda bahwa seseorang mengalami kehilangan minat dan kegembiraan?"],
+    "intent": "pertanyaan_informasi_GU2",
+    "response": ["Tanda-tanda termasuk penurunan partisipasi dalam kegiatan yang biasa, penarikan diri dari interaksi sosial, kurangnya antusiasme atau motivasi, serta merasa datar atau tidak bersemangat."]
+  },
+  {
+    "patterns": ["Bagaimana cara mengatasi kehilangan minat dan kegembiraan?"],
+    "intent": "pertanyaan_informasi_GU2",
+    "response": ["Mengatasi masalah ini bisa melibatkan berbicara dengan seorang profesional kesehatan mental, mencoba aktivitas baru, menetapkan tujuan kecil yang dapat dicapai, menjaga kesehatan fisik dengan olahraga dan pola makan sehat, serta mencari dukungan dari teman dan keluarga."]
+  },
+  {
+    "patterns": ["Apakah kehilangan minat dan kegembiraan selalu merupakan tanda depresi?"],
+    "intent": "pertanyaan_informasi_GU2",
+    "response": ["tidak juga, Kehilangan minat dan kegembiraan bisa juga disebabkan oleh faktor lain seperti stres, kelelahan, atau kondisi medis. Tapi untuk dikategorikan depresi, gejala ini harus ditambah gejala lainnya dan ditambah beberapa faktor lain juga."]
+  },
+  {
+    "patterns": ["Bagaimana seseorang dapat membantu teman atau anggota keluarga yang mengalami kehilangan minat dan kegembiraan?"],
+    "intent": "pertanyaan_informasi_GU2",
+    "response": ["Menawarkan dukungan emosional, mengajak mereka untuk berbicara tentang perasaan mereka, mengundang mereka untuk berpartisipasi dalam aktivitas yang mungkin mereka nikmati, dan mendorong mereka untuk mencari bantuan profesional jika diperlukan."]
+  },
+  {
+    "patterns": ["Apa dampak jangka panjang dari kehilangan minat dan kegembiraan jika tidak diatasi?"],
+    "intent": "pertanyaan_informasi_GU2",
+    "response": ["Jika tidak diatasi, kehilangan minat dan kegembiraan dapat menyebabkan penurunan kualitas hidup, isolasi sosial, penurunan kinerja di tempat kerja atau sekolah, dan peningkatan risiko gangguan kesehatan mental seperti depresi berat."]
+  },
+  {
+    "patterns": ["Kapan sebaiknya seseorang mencari bantuan profesional untuk kehilangan minat dan kegembiraan?"],
+    "intent": "pertanyaan_informasi_GU2",
+    "response": ["Seseorang sebaiknya mencari bantuan profesional jika mereka mengalami kehilangan minat dan kegembiraan yang berlangsung lebih dari beberapa minggu, terutama jika ini disertai dengan gejala lain seperti perubahan pola tidur, perubahan nafsu makan, perasaan putus asa, atau pikiran untuk bunuh diri."]
+  },
+  {
+    "patterns": ["Saya tidak bisa menikmati hal-hal yang biasanya saya sukai."],
+    "intent": "diagnosa_GU2",
+    "response": ["Kehilangan minat dalam aktivitas yang biasanya dinikmati bisa menjadi tanda depresi. Sebaiknya Anda berbicara dengan profesional kesehatan untuk evaluasi lebih lanjut."]
+  },
+  {
+    "patterns": ["Saya tidak lagi merasa tertarik pada hobi saya. Dulu saya sangat menikmati melukis, tapi sekarang saya tidak bisa menemukan motivasi untuk memulainya"],
+    "intent": "diagnosa_GU2",
+    "response": ["Kehilangan minat pada hobi yang dulu Anda nikmati adalah gejala utama dari depresi. Ini bisa sangat mengecewakan dan membuat Anda merasa semakin tertekan. Penting untuk mencoba tetap terlibat dengan aktivitas yang dulu Anda nikmati, bahkan jika itu terasa sulit. Kita bisa mulai dengan langkah kecil, mungkin hanya meluangkan beberapa menit setiap hari untuk melukis. Selain itu, terapi berbicara dapat membantu Anda menemukan kembali minat dan kegembiraan Anda."]
+  },
+  {
+    "patterns": ["Saya tidak lagi merasa senang saat berkumpul dengan teman-teman. Dulu saya sangat menikmati waktu bersama mereka, tapi sekarang saya merasa datar dan tidak tertarik."],
+    "intent": "diagnosa_GU2",
+    "response": ["Rasa datar dan kehilangan kegembiraan dalam hubungan sosial adalah tanda umum dari depresi. Sangat penting untuk tetap terhubung dengan orang-orang terdekat, meskipun itu sulit. Kita bisa mencari cara-cara untuk membuat interaksi sosial lebih bermakna bagi Anda. Terapi kelompok atau dukungan dari komunitas juga bisa sangat bermanfaat."]
+  },
+  {
+    "patterns": ["Saya merasa tidak ada lagi hal yang bisa membuat saya bahagia. Segala sesuatu yang dulu membuat saya senang sekarang terasa tidak berarti."],
+    "intent": "diagnosa_GU2",
+    "response": ["Merasa bahwa tidak ada yang bisa membuat Anda bahagia lagi adalah gejala yang sangat menyakitkan dari depresi. Ini menunjukkan betapa mendalamnya perasaan Anda. Penting untuk mencari bantuan dan mendiskusikan perasaan ini. Terapi kognitif perilaku dapat membantu Anda menemukan kembali sumber kegembiraan dalam hidup Anda. Selain itu, mungkin ada aktivitas baru yang bisa kita eksplorasi bersama yang bisa memberikan Anda rasa kegembiraan kembali."]
+  },
+  {
+    "patterns": ["Saya merasa seperti robot, menjalani hari-hari tanpa perasaan atau gairah. Saya bahkan tidak menikmati makanan favorit saya lagi."],
+    "intent": "diagnosa_GU2",
+    "response": ["Merasa seperti Anda menjalani hari-hari tanpa gairah atau kegembiraan adalah gejala yang menyedihkan dari depresi. Kehilangan minat pada hal-hal yang biasanya Anda nikmati, termasuk makanan favorit Anda, bisa sangat mengganggu. Kami bisa mencoba pendekatan mindfulness atau terapi kognitif untuk membantu Anda kembali merasakan kenikmatan dalam aktivitas sehari-hari. Terapi ini dapat membantu Anda lebih terhubung dengan perasaan Anda dan menemukan kembali kegembiraan dalam hal-hal kecil."]
+  },
+  {
+    "patterns": ["Saya merasa terjebak dalam rutinitas yang tidak bermakna. Dulu saya merasa bersemangat tentang pekerjaan saya, tapi sekarang saya hanya merasa hampa."],
+    "intent": "diagnosa_GU2",
+    "response": ["Merasa hampa dan kehilangan semangat terhadap pekerjaan Anda adalah gejala umum dari depresi. Sangat penting untuk mengidentifikasi apa yang telah berubah dan bagaimana kita bisa membantu Anda menemukan kembali makna dan kepuasan dalam pekerjaan Anda. Mungkin kita bisa melihat cara untuk mengubah rutinitas Anda, menetapkan tujuan kecil, atau bahkan mengeksplorasi minat baru yang bisa menambah gairah dalam hidup Anda. Terapi berbicara dapat membantu dalam proses ini."]
+  },
+  {
+    "patterns": ["akhir - akhir ini Saya merasa kurang energi dan sangat lelah sepanjang waktu?"],
+    "intent": "diagnosa_GU3",
+    "response": ["Kelelahan yang berlebihan bisa menjadi tanda depresi. Cobalah untuk menjaga pola tidur yang sehat dan berbicara dengan profesional kesehatan jika kelelahan berlanjut."]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan berkurangnya energi?"],
+    "intent": "pertanyaan_informasi_GU3",
+    "response": ["Berkurangnya energi merujuk pada keadaan di mana seseorang merasa kurang bertenaga atau kurang bersemangat untuk melakukan aktivitas sehari-hari. Ini bisa membuat seseorang merasa lemah dan sulit untuk menjalani rutinitas normal."]
+  },
+  {
+    "patterns": ["Apa yang menyebabkan seseorang mudah lelah?"],
+    "intent": "pertanyaan_informasi_GU3",
+    "response": ["Mudah lelah bisa disebabkan oleh berbagai faktor, termasuk kurang tidur, pola makan yang buruk, stres, depresi, anemia, atau kondisi medis lainnya seperti gangguan tiroid atau diabetes."]
+  },
+  {
+    "patterns": ["Bagaimana berkurangnya energi dapat mempengaruhi aktivitas sehari-hari?"],
+    "intent": "pertanyaan_informasi_GU3",
+    "response": ["Berkurangnya energi dapat menyebabkan penurunan produktivitas, kesulitan dalam menyelesaikan tugas-tugas harian, serta mengurangi partisipasi dalam kegiatan sosial dan rekreasi. Seseorang mungkin merasa perlu istirahat lebih sering dan mengalami kesulitan mempertahankan konsentrasi."]
+  },
+  {
+    "patterns": ["Apakah ada hubungan antara berkurangnya energi dan menurunnya aktivitas?"],
+    "intent": "pertanyaan_informasi_GU3",
+    "response": ["Ya, ada hubungan yang erat antara keduanya. Berkurangnya energi seringkali menyebabkan penurunan aktivitas, karena seseorang merasa terlalu lelah untuk berpartisipasi dalam kegiatan yang biasanya mereka nikmati atau perlukan."]
+  },
+  {
+    "patterns": ["Bagaimana cara mengatasi berkurangnya energi dan mudah lelah?"],
+    "intent": "pertanyaan_informasi_GU3",
+    "response": ["Beberapa cara untuk mengatasi berkurangnya energi dan mudah lelah termasuk mendapatkan tidur yang cukup, makan makanan bergizi, berolahraga secara teratur, mengelola stres, dan berkonsultasi dengan dokter jika ada kondisi medis yang mendasarinya."]
+  },
+  {
+    "patterns": ["Apa saja tanda-tanda bahwa seseorang mengalami penurunan aktivitas?"],
+    "intent": "pertanyaan_informasi_GU3",
+    "response": ["Tanda-tanda termasuk kurangnya partisipasi dalam kegiatan yang biasa, menghabiskan lebih banyak waktu untuk istirahat atau tidur, menghindari aktivitas sosial, dan kesulitan menyelesaikan tugas-tugas sehari-hari."]
+  },
+  {
+    "patterns": ["Bagaimana kondisi kesehatan mental mempengaruhi energi dan aktivitas seseorang?"],
+    "intent": "pertanyaan_informasi_GU3",
+    "response": ["Kondisi kesehatan mental seperti depresi dan kecemasan dapat secara signifikan mengurangi energi dan menurunkan tingkat aktivitas. Seseorang mungkin merasa terlalu tertekan atau cemas untuk berpartisipasi dalam kegiatan yang biasa mereka lakukan."]
+  },
+  {
+    "patterns": ["Apakah perubahan gaya hidup dapat membantu meningkatkan energi dan aktivitas?"],
+    "intent": "pertanyaan_informasi_GU3",
+    "response": ["Ya, perubahan gaya hidup seperti pola makan sehat, olahraga teratur, manajemen stres, dan memastikan tidur yang cukup dapat membantu meningkatkan energi dan meningkatkan tingkat aktivitas."]
+  },
+  {
+    "patterns": ["Kapan sebaiknya seseorang mencari bantuan medis untuk masalah berkurangnya energi dan menurunnya aktivitas?"],
+    "intent": "pertanyaan_informasi_GU3",
+    "response": ["Seseorang sebaiknya mencari bantuan medis jika mereka mengalami berkurangnya energi dan penurunan aktivitas yang berlangsung lebih dari beberapa minggu, terutama jika ini disertai dengan gejala lain seperti penurunan berat badan yang tidak dapat dijelaskan, masalah tidur yang parah, atau perasaan depresi atau kecemasan yang signifikan."]
+  },
+  {
+    "patterns": ["Saya sering merasa lelah dan tidak punya energi."],
+    "intent": "diagnosa_GU3",
+    "response": ["Kelelahan dan kurangnya energi bisa menjadi tanda depresi. Cobalah untuk menjaga pola tidur yang sehat dan berbicara dengan profesional kesehatan jika kelelahan berlanjut."]
+  },
+  {
+    "patterns": ["Saya merasa sangat lelah sepanjang waktu, bahkan setelah tidur yang cukup. Sulit bagiku untuk melakukan aktivitas sehari-hari karena energi saya selalu rendah."],
+    "intent": "diagnosa_GU3",
+    "response": ["Mudah lelah dan berkurangnya energi adalah gejala umum dari depresi. Hal ini bisa membuat aktivitas sehari-hari terasa sangat berat. Penting untuk mencari tahu apa yang bisa menyebabkan kelelahan ini. Kita bisa memeriksa pola tidur Anda dan mencari cara untuk meningkatkan kualitas tidur Anda. Selain itu, olahraga ringan seperti jalan kaki atau yoga dapat membantu meningkatkan energi secara bertahap. Terapi juga dapat membantu Anda mengidentifikasi faktor-faktor yang mungkin menyebabkan kelelahan dan mencari solusi untuk mengelolanya."]
+  },
+  {
+    "patterns": "Saya merasa tidak punya motivasi untuk melakukan apa pun. Bahkan tugas-tugas sehari-hari seperti mandi atau menyiapkan makanan terasa sangat berat dan melelahkan.",
+    "intent": "diagnosa_GU3",
+    "response": ["Kehilangan motivasi dan merasa tidak mampu untuk melakukan tugas sehari-hari adalah gejala yang sangat mengganggu dari depresi. Ini bisa membuat rutinitas harian terasa sangat menantang. Mari kita bicarakan lebih lanjut tentang apa yang bisa membantu Anda menemukan kembali motivasi. Mungkin membuat jadwal harian yang sederhana atau membagi tugas kecil menjadi langkah-langkah yang lebih mudah dapat membantu. Terapi kognitif perilaku juga dapat membantu Anda menetapkan tujuan yang realistis dan menemukan strategi untuk meningkatkan motivasi."]
+  },
+  {
+    "patterns": "Saya merasa semakin menarik diri dari teman-teman dan aktivitas sosial. Saya hanya ingin menghabiskan waktu sendirian di rumah karena merasa terlalu lelah untuk berinteraksi dengan orang lain.",
+    "intent": "diagnosa_GU3",
+    "response": ["Merasa ingin menarik diri dari interaksi sosial adalah respons umum dari tubuh saat mengalami depresi. Ini bisa membuat Anda merasa terisolasi dan lebih sulit untuk mengatasi perasaan kelelahan. Meskipun sulit, terhubung dengan orang-orang yang Anda percayai dan menikmati waktu bersama mereka dapat membantu meningkatkan suasana hati dan energi. Mari kita cari cara untuk membuat interaksi sosial lebih bermakna dan mengurangi tekanan yang mungkin Anda rasakan."]
+  },
+  {
+    "patterns": ["Saya merasa tidak mampu untuk bekerja dengan efisien seperti dulu. Konsentrasi saya menurun dan saya sering kali merasa terlalu lelah untuk menyelesaikan pekerjaan."],
+    "intent": "diagnosa_GU3_G1",
+    "response": ["Penurunan konsentrasi dan produktivitas adalah gejala umum dari depresi yang dapat mempengaruhi pekerjaan dan aktivitas sehari-hari Anda. Penting untuk mengenali bahwa ini bukanlah kesalahan Anda sendiri, tetapi merupakan bagian dari kondisi yang dapat diobati. Kami bisa membicarakan strategi untuk membantu Anda mengelola konsentrasi dan meningkatkan produktivitas. Terapi kognitif perilaku dapat membantu Anda mengembangkan keterampilan manajemen waktu dan teknik untuk meningkatkan fokus."]
+  },
+  {
+    "patterns": ["Saya merasa seperti tidak ada gunanya berusaha. Bahkan mencoba melakukan hal-hal sepele saja terasa melelahkan dan sia-sia."],
+    "intent": "diagnosa_GU3_G3.",
+    "response": ["Merasa tidak ada gunanya berusaha adalah gejala yang sangat menantang dari depresi. Ini dapat mengurangi motivasi dan membuat Anda merasa putus asa. Kami bisa mencari cara untuk menetapkan tujuan yang realistis dan memberikan dukungan yang Anda butuhkan untuk menemukan kembali rasa pencapaian. Terapi berbicara dapat membantu Anda mengeksplorasi keyakinan negatif yang mungkin mempengaruhi pandangan Anda terhadap diri sendiri dan dunia sekitar."]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan konsentrasi berkurang?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Konsentrasi berkurang berarti seseorang mengalami kesulitan untuk fokus atau mempertahankan perhatian pada satu tugas atau aktivitas tertentu untuk jangka waktu yang lama."]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan perhatian berkurang?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Perhatian berkurang mengacu pada ketidakmampuan seseorang untuk memberikan perhatian penuh pada tugas atau situasi tertentu, sering kali mudah teralihkan atau tidak mampu mempertahankan fokus."]
+  },
+  {
+    "patterns": ["Apa saja penyebab umum dari berkurangnya konsentrasi dan perhatian?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Penyebab umum termasuk kelelahan, stres, gangguan kecemasan, depresi, kurang tidur, gangguan medis seperti ADHD, penggunaan obat-obatan tertentu, dan gangguan lingkungan."]
+  },
+  {
+    "patterns": ["Bagaimana berkurangnya konsentrasi dan perhatian mempengaruhi kehidupan sehari-hari?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Hal ini dapat menyebabkan penurunan produktivitas di tempat kerja atau sekolah, kesulitan menyelesaikan tugas, peningkatan kesalahan, dan masalah dalam hubungan pribadi karena ketidakmampuan untuk mendengarkan atau berfokus pada percakapan."]
+  },
+  {
+    "patterns": ["Apa tanda-tanda bahwa seseorang mengalami penurunan konsentrasi dan perhatian?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Konsentrasi berkurang berarti seseorang mengalami kesulitan untuk fokus atau mempertahankan perhatian pada satu tugas atau aktivitas tertentu untuk jangka waktu yang lama."]
+  },
+  {
+    "patterns": ["Bagaimana cara mengatasi konsentrasi dan perhatian yang berkurang?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Beberapa cara termasuk menciptakan lingkungan kerja yang bebas dari gangguan, menjaga pola tidur yang baik, mengatur jadwal yang teratur, berolahraga secara teratur, makan makanan yang sehat, serta teknik relaksasi seperti meditasi atau mindfulness."]
+  },
+  {
+    "patterns": ["Apakah berkurangnya konsentrasi dan perhatian selalu merupakan tanda gangguan mental depresi?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Tidak juga, berkurangnya konsentrasi dan perhatian bisa juga disebabkan oleh faktor lain seperti stres, ADHD, atau kondisi medis. Tapi untuk dikategorikan depresi, gejala ini harus ditambah gejala lainnya dan ditambah beberapa faktor lain juga."]
+  },
+  {
+    "patterns": ["Bagaimana seseorang dapat membantu teman atau anggota keluarga yang mengalami berkurangnya konsentrasi dan perhatian?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Menawarkan dukungan dengan membantu mereka menciptakan lingkungan yang bebas gangguan, mengajak mereka untuk berbicara tentang apa yang mereka alami, dan mendorong mereka untuk mencari bantuan profesional jika diperlukan."]
+  },
+  {
+    "patterns": ["Apa dampak jangka panjang dari berkurangnya konsentrasi dan perhatian jika tidak diatasi?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Dampak jangka panjang dapat termasuk penurunan kinerja akademik atau pekerjaan, masalah dalam hubungan interpersonal, peningkatan risiko kecelakaan, dan potensi perkembangan gangguan kesehatan mental."]
+  },
+  {
+    "patterns": ["Kapan sebaiknya seseorang mencari bantuan profesional untuk masalah berkurangnya konsentrasi dan perhatian?"],
+    "intent": "pertanyaan_informasi_G1",
+    "response": ["Seseorang sebaiknya mencari bantuan profesional jika mereka mengalami berkurangnya konsentrasi dan perhatian yang berlangsung lebih dari beberapa minggu, terutama jika ini mengganggu kehidupan sehari-hari mereka atau disertai dengan gejala lain seperti depresi atau gangguan kecemasan."]
+  },
+  {
+    "patterns": ["Saya sulit berkonsentrasi dan membuat keputusan."],
+    "intent": "diagnosa_G1",
+    "response": ["Kesulitan berkonsentrasi dan membuat keputusan bisa menjadi tanda depresi. Sebaiknya Anda berkonsultasi dengan profesional kesehatan untuk evaluasi lebih lanjut."]
+  },
+  {
+    "patterns": ["Saya sulit berkonsentrasi dan membuat keputusan. Pekerjaan saya mulai terpengaruh karena saya merasa tidak fokus dan selalu cemas."],
+    "intent": "diagnosa_G1",
+    "response": ["Kesulitan berkonsentrasi dan membuat keputusan adalah gejala umum dari depresi. Ini bisa sangat mempengaruhi produktivitas dan kualitas hidup Anda. Ada beberapa strategi yang bisa kita coba untuk membantu meningkatkan fokus Anda, termasuk teknik manajemen stres, latihan fokus, dan mungkin juga penyesuaian pada rutinitas kerja Anda. Mari kita bicarakan lebih lanjut tentang bagaimana kita bisa membantu Anda kembali merasa lebih terkendali. Maaf sebelumnya, apakah ada gejala lain yang lagi anda alami saat ini?"]
+  },
+  {
+    "patterns": ["Dokter, belakangan ini saya merasa sulit sekali untuk fokus pada pekerjaan saya. Saya sering sekali kehilangan konsentrasi, dan ini membuat saya merasa frustrasi dan tertekan."],
+    "intent": "diagnosa_G1",
+    "response": ["Saya mengerti bagaimana perasaan Anda. Sulitnya untuk fokus dan konsentrasi bisa menjadi salah satu gejala depresi. Apakah Anda merasa bahwa ini sudah berlangsung cukup lama? Selain itu, apakah Anda mengalami kesulitan tidur atau perubahan nafsu makan?"]
+  },
+  {
+    "patterns": ["Saya merasa sangat sulit untuk membaca atau menonton sesuatu dalam waktu yang lama. Saya selalu kehilangan konsentrasi dan pikiran saya entah kemana - mana."],
+    "intent": "diagnosa_G1",
+    "response": ["Hal tersebut bisa menjadi tanda bahwa Anda mengalami kesulitan dengan perhatian dan konsentrasi, yang seringkali terkait dengan depresi. Bagaimana suasana hati Anda secara umum? Apakah Anda merasa sedih atau gelisah lebih sering belakangan ini?"]
+  },
+  {
+    "patterns": ["Saya sering sekali lupa apa yang baru saja saya lakukan atau apa yang ingin saya katakan. Ini sangat mengganggu kehidupan sehari-hari saya."],
+    "intent": "diagnosa_G1",
+    "response": ["Lupa dan kehilangan fokus adalah gejala umum dari depresi. Ini bisa sangat mengganggu, namun penting untuk mencari tahu penyebab utamanya. Apakah Anda mengalami sedih atau gelisah yang meningkat akhir-akhir ini?"]
+  },
+  {
+    "patterns": ["Saya merasa sangat mudah terganggu. Sedikit suara atau gangguan kecil bisa membuat saya tidak bisa fokus lagi pada apa yang saya kerjakan."],
+    "intent": "diagnosa_G1",
+    "response": ["Ini juga merupakan gejala umum dari depresi. Apakah Anda juga merasa sedih atau gelisah yang meningkat? Bagaimana pola tidur Anda, apakah ada perubahan yang signifikan?\nG2 ( harga diri dan kepercayaan diri berkurang.)"]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan harga diri berkurang?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Harga diri berkurang berarti seseorang memiliki pandangan negatif atau rendah tentang diri mereka sendiri, merasa tidak berharga atau tidak cukup baik dalam berbagai aspek kehidupan."]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan kepercayaan diri berkurang?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Kepercayaan diri berkurang mengacu pada kurangnya keyakinan seseorang terhadap kemampuan atau keterampilan mereka sendiri, merasa tidak yakin bisa berhasil dalam tugas atau situasi tertentu."]
+  },
+  {
+    "patterns": ["Apa saja penyebab umum dari berkurangnya harga diri dan kepercayaan diri?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Penyebab umum termasuk pengalaman traumatis atau kegagalan, kritik atau penolakan dari orang lain, perbandingan sosial yang negatif, stres kronis, masalah kesehatan mental seperti depresi atau kecemasan, dan pengaruh media sosial."]
+  },
+  {
+    "patterns": ["Bagaimana berkurangnya harga diri dan kepercayaan diri mempengaruhi kehidupan sehari-hari?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Ini dapat menyebabkan penurunan motivasi, menghindari tantangan atau kesempatan baru, isolasi sosial, dan kesulitan dalam hubungan pribadi atau profesional. Seseorang mungkin juga mengalami kesulitan dalam membuat keputusan dan merasa tidak mampu untuk mencapai tujuan mereka."]
+  },
+  {
+    "patterns": ["Apa tanda-tanda bahwa seseorang mengalami penurunan harga diri dan kepercayaan diri?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Tanda-tanda termasuk sering mengkritik diri sendiri, merasa tidak layak mendapatkan hal-hal baik, menghindari situasi sosial atau profesional, merasa cemas atau takut gagal, dan ketidakmampuan menerima pujian atau pengakuan."]
+  },
+  {
+    "patterns": ["Bagaimana cara mengatasi harga diri dan kepercayaan diri yang berkurang?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Beberapa cara termasuk berbicara dengan seorang terapis atau konselor, berlatih self-compassion, menetapkan dan mencapai tujuan kecil, menciptakan lingkungan yang mendukung, berolahraga secara teratur, serta mengembangkan keterampilan dan hobi baru."]
+  },
+  {
+    "patterns": ["Apakah harga diri dan kepercayaan diri yang berkurang selalu menunjukkan masalah kesehatan mental depresi?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Tidak juga, berkurangnya harga diri dan kepercayaan diri bisa juga disebabkan oleh faktor lain seperti kecemasan atau ini juga bisa disebabkan oleh faktor-faktor sementara seperti kegagalan atau kritik yang baru-baru ini dialami. Tapi untuk dikategorikan depresi, gejala ini harus ditambah gejala lainnya dan ditambah beberapa faktor lain juga."]
+  },
+  {
+    "patterns": ["Bagaimana seseorang dapat membantu teman atau anggota keluarga yang mengalami berkurangnya harga diri dan kepercayaan diri?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Menawarkan dukungan emosional, memberikan pujian dan dorongan, membantu mereka melihat kualitas positif dalam diri mereka, mendorong mereka untuk mencoba hal-hal baru, dan mungkin menyarankan untuk mencari bantuan profesional jika diperlukan."]
+  },
+  {
+    "patterns": ["Apa dampak jangka panjang dari berkurangnya harga diri dan kepercayaan diri jika tidak diatasi?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Dampak jangka panjang dapat termasuk penurunan kualitas hidup, masalah dalam hubungan interpersonal, kinerja akademik atau pekerjaan yang buruk, serta peningkatan risiko gangguan kesehatan mental seperti depresi dan kecemasan."]
+  },
+  {
+    "patterns": ["Kapan sebaiknya seseorang mencari bantuan profesional untuk masalah harga diri dan kepercayaan diri yang berkurang?"],
+    "intent": "pertanyaan_informasi_G2",
+    "response": ["Seseorang sebaiknya mencari bantuan profesional jika mereka mengalami penurunan harga diri dan kepercayaan diri yang berlangsung lebih dari beberapa minggu, terutama jika ini mengganggu kehidupan sehari-hari mereka atau disertai dengan gejala lain seperti perasaan putus asa atau pikiran untuk bunuh diri."]
+  },
+  {
+    "patterns": ["Dokter, belakangan ini saya merasa sangat tidak berharga dan tidak percaya diri. Saya merasa seperti semua yang saya lakukan selalu salah."],
+    "intent": "diagnosa_G2",
+    "response": ["Saya mendengar apa yang Anda rasakan, dan saya sangat menghargai Anda telah berbagi ini. Perasaan tidak berharga dan kurang percaya diri bisa menjadi tanda depresi. Apakah Anda bisa memberi tahu saya kapan perasaan ini mulai muncul dan apakah ada peristiwa tertentu yang mungkin memicunya?"]
+  },
+  {
+    "patterns": ["Saya sering merasa bahwa saya tidak cukup baik dibandingkan orang lain. Ini membuat saya merasa sangat rendah diri dan sulit untuk berinteraksi dengan orang lain."],
+    "intent": "diagnosa_G2",
+    "response": ["Perasaan rendah diri dan kesulitan berinteraksi dengan orang lain bisa sangat menyakitkan. Ini bisa jadi gejala depresi atau masalah harga diri. Apakah perasaan seperti ini sudah jalan 2 minggu di diri anda? Bagaimana dengan gejala lain, apa ada yang anda rasakan?"]
+  },
+  {
+    "patterns": ["Saya merasa sangat takut untuk mencoba hal-hal baru karena saya yakin akan gagal. Ini membuat saya merasa semakin tidak berguna."],
+    "intent": "diagnosa_G2",
+    "response": ["Ketakutan akan kegagalan dan perasaan tidak berguna sangat umum dialami oleh orang yang mengalami depresi. Apa yang biasanya Anda lakukan ketika merasa seperti ini? Apakah ada sesuatu yang membantu Anda merasa lebih baik, meskipun hanya sedikit?"]
+  },
+  {
+    "patterns": ["Saya merasa tidak ada yang menghargai saya, dan saya sendiri pun tidak bisa menghargai diri saya. Setiap hari rasanya berat dan saya merasa semakin tenggelam dalam perasaan ini."],
+    "intent": "diagnosa_G2",
+    "response": ["Merasa tidak dihargai dan tidak mampu menghargai diri sendiri bisa sangat melelahkan secara emosional. Saya ingin membantu Anda memahami dan menangani perasaan ini. Sudah berapa lama anda merasakan gejala ini?"]
+  },
+  {
+    "patterns": ["Saya merasa tidak ada yang bisa saya lakukan dengan benar. Kepercayaan diri saya benar-benar hilang, dan saya merasa putus asa."],
+    "intent": "diagnosa_G2",
+    "response": ["Perasaan putus asa dan kehilangan kepercayaan diri adalah gejala serius yang perlu ditangani. Saya ingin kita bekerja sama untuk menemukan cara-cara yang bisa membantu Anda merasa lebih baik. Apakah Anda mengalami gejala lain yang membuat anda kehilangan kepercayaan diri anda?\nG3 ( gagasan tentang rasa bersalah dan tidak berguna.)"]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan rasa bersalah?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Rasa bersalah adalah perasaan penyesalan atau penilaian negatif terhadap diri sendiri karena tindakan atau kelalaian yang dianggap salah atau tidak sesuai dengan nilai dan norma pribadi atau sosial."]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan rasa tidak berguna?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Rasa tidak berguna adalah perasaan bahwa seseorang tidak memiliki nilai atau kontribusi yang berarti, sering kali disertai dengan perasaan tidak mampu atau tidak layak."]
+  },
+  {
+    "patterns": ["Apa saja penyebab umum dari gagasan tentang rasa bersalah dan tidak berguna?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Penyebab umum termasuk kesalahan atau kegagalan pribadi, kritik atau penolakan dari orang lain, perbandingan sosial yang negatif, trauma masa lalu, tekanan sosial atau budaya, dan kondisi kesehatan mental seperti depresi."]
+  },
+  {
+    "patterns": ["Bagaimana gagasan tentang rasa bersalah dan tidak berguna mempengaruhi kehidupan sehari-hari?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Gagasan ini dapat mengurangi motivasi dan produktivitas, menyebabkan isolasi sosial, memicu kecemasan dan depresi, serta mempengaruhi hubungan interpersonal dan kemampuan untuk membuat keputusan."]
+  },
+  {
+    "patterns": ["Apa tanda-tanda bahwa seseorang mengalami gagasan tentang rasa bersalah dan tidak berguna?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Tanda-tanda termasuk sering mengkritik diri sendiri, merasa tidak layak atau tidak mampu, menghindari tantangan atau kesempatan, merasakan penyesalan yang berlebihan, dan mengabaikan atau menolak pujian atau pengakuan dari orang lain."]
+  },
+  {
+    "patterns": ["Bagaimana cara mengatasi gagasan tentang rasa bersalah dan tidak berguna?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Mengatasi gagasan ini bisa melibatkan berbicara dengan seorang terapis atau konselor, berlatih self-compassion, mengubah pola pikir negatif menjadi positif, menetapkan dan mencapai tujuan kecil, serta mencari dukungan dari teman dan keluarga."]
+  },
+  {
+    "patterns": ["Apakah gagasan tentang rasa bersalah dan tidak berguna selalu menunjukkan masalah kesehatan mental yang serius?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Tidak juga, gagasan tentang rasa bersalah dan tidak berguna bisa juga disebabkan oleh faktor lain seperti kecemasan atau faktor-faktor sementara seperti kegagalan atau kritik yang baru-baru ini dialami. Tapi untuk dikategorikan depresi, gejala ini harus ditambah gejala lainnya dan beberapa faktor lain juga."]
+  },
+  {
+    "patterns": ["Bagaimana seseorang dapat membantu teman atau anggota keluarga yang mengalami gagasan tentang rasa bersalah dan tidak berguna?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Menawarkan dukungan emosional, mendengarkan tanpa menghakimi, memberikan dorongan positif, membantu mereka melihat kualitas dan pencapaian mereka, dan mungkin menyarankan mereka untuk mencari bantuan profesional jika diperlukan."]
+  },
+  {
+    "patterns": ["Apa dampak jangka panjang dari gagasan tentang rasa bersalah dan tidak berguna jika tidak diatasi?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Dampak jangka panjang dapat termasuk penurunan kualitas hidup, kinerja akademik atau pekerjaan yang buruk, hubungan interpersonal yang bermasalah, serta peningkatan risiko gangguan kesehatan mental seperti depresi dan kecemasan."]
+  },
+  {
+    "patterns": ["Kapan sebaiknya seseorang mencari bantuan profesional untuk masalah harga diri dan kepercayaan diri yang berkurang?"],
+    "intent": "pertanyaan_informasi_G3",
+    "response": ["Seseorang sebaiknya mencari bantuan profesional jika mereka mengalami penurunan harga diri dan kepercayaan diri yang berlangsung lebih dari beberapa minggu, terutama jika ini mengganggu kehidupan sehari-hari mereka atau disertai dengan gejala lain seperti perasaan putus asa atau pikiran untuk bunuh diri."]
+  },
+  {
+    "patterns": ["Saya merasa tidak berharga dan bersalah sepanjang waktu."],
+    "intent": "diagnosa_G3",
+    "response": ["Perasaan tidak berharga dan bersalah bisa menjadi tanda depresi. Pertimbangkan untuk mencari bantuan dari profesional kesehatan mental."]
+  },
+  {
+    "patterns": ["Saya merasa tidak ada harapan lagi dan sering kali berpikir bahwa hidup saya tidak ada artinya. Saya tidak tahu bagaimana cara mengatasi perasaan ini."],
+    "intent": "diagnosa_G3_G4",
+    "response": ["Perasaan putus asa dan kehilangan makna adalah gejala yang sangat serius dari depresi. Penting untuk mengetahui bahwa Anda tidak sendirian dan ada bantuan yang tersedia. Mari kita bicarakan lebih lanjut tentang perasaan Anda dan mencari strategi yang dapat membantu Anda menemukan kembali harapan dan makna dalam hidup Anda. Terapi dan dukungan dari orang-orang terdekat Anda bisa sangat membantu. Maaf sebelumnya, apakah ada gejala lain yang saat ini anda alami?"]
+  },
+  {
+    "patterns": ["Saya merasa sangat bersalah karena tidak bisa menjadi orang yang lebih baik untuk keluarga saya. Saya merasa tidak pernah cukup dan ini membuat saya sangat tertekan."],
+    "intent": "diagnosa_G3",
+    "response": ["Saya mendengar perasaan Anda dan saya bisa merasakan betapa berat beban ini bagi Anda. Rasa bersalah dan merasa tidak cukup untuk orang yang kita cintai sering kali terkait dengan depresi. Bagaimana hubungan Anda dengan keluarga saat ini? Apakah mereka menyadari perasaan Anda?"]
+  },
+  {
+    "patterns": ["Dokter, saya terus-menerus merasa bersalah atas hal-hal kecil yang saya lakukan atau tidak lakukan. Perasaan ini membuat saya merasa tidak berguna."],
+    "intent": "diagnosa_G3",
+    "response": ["Perasaan bersalah yang berlebihan dan merasa tidak berguna bisa menjadi tanda depresi. Saya sangat menghargai Anda berbagi hal ini. Apakah Anda bisa memberi tahu saya lebih banyak tentang hal-hal spesifik yang membuat Anda merasa bersalah?"]
+  },
+  {
+    "patterns": ["Setiap kali saya melihat ke belakang, saya merasa bersalah atas banyak kesalahan yang saya buat. Rasanya seperti semua kegagalan saya membuat saya tidak berguna."],
+    "intent": "diagnosa_G3",
+    "response": ["Mengenang masa lalu dan merasa bersalah atas kesalahan yang dibuat adalah hal yang sulit. Ini bisa memperburuk perasaan tidak berguna. Apakah ada saat-saat di masa lalu yang terus-menerus Anda pikirkan? Bagaimana cara Anda menghadapinya?"]
+  },
+  {
+    "patterns": ["Saya merasa seperti beban bagi orang lain. Saya tidak bisa berhenti merasa bersalah karena membuat hidup mereka lebih sulit."],
+    "intent": "diagnosa_G3",
+    "response": ["Merasa seperti beban dan bersalah karena membuat hidup orang lain lebih sulit adalah perasaan yang sangat berat. Ini seringkali merupakan gejala dari depresi. Apakah Anda sudah mencoba berbicara dengan orang-orang terdekat tentang perasaan Anda ini?"]
+  },
+  {
+    "patterns": ["Saya merasa tidak layak mendapatkan hal-hal baik dalam hidup saya. Semua yang terjadi salah saya dan saya merasa sangat bersalah karenanya."],
+    "intent": "diagnosa_G3",
+    "response": ["Merasa tidak layak dan bersalah atas hal-hal yang terjadi bisa sangat menyakitkan. Ini adalah tanda penting dari depresi. Saya ingin membantu Anda menemukan cara untuk meredakan perasaan ini. Apakah Anda bersedia untuk membahas lebih lanjut tentang apa yang Anda alami dan mungkin mencoba beberapa teknik yang dapat membantu?\nG4 ( pandangan masa depan yang suram dan pesimistis)"]
+  },
+  {
+    "patterns": ["Mengapa seseorang bisa memiliki pandangan masa depan yang suram dan pesimistis?"],
+    "intent": "pertanyaan_informasi_G4",
+    "response": ["Seseorang bisa memiliki pandangan masa depan yang suram dan pesimistis karena berbagai alasan, termasuk pengalaman traumatis, ketidakpastian ekonomi, masalah kesehatan mental, dan pengaruh lingkungan sosial atau media."]
+  },
+  {
+    "patterns": ["Bagaimana cara mengatasi pandangan masa depan yang suram dan pesimistis?"],
+    "intent": "pertanyaan_informasi_G4",
+    "response": ["Untuk mengatasi pandangan masa depan yang suram dan pesimistis, anda dapat mencari dukungan dari teman dan keluarga, berbicara dengan seorang profesional kesehatan mental, mengembangkan pola pikir yang lebih positif, serta fokus pada tujuan dan langkah-langkah kecil yang dapat dicapai."]
+  },
+  {
+    "patterns": ["Apa dampak dari memiliki pandangan masa depan yang suram dan pesimistis terhadap kesehatan mental seseorang?"],
+    "intent": "pertanyaan_informasi_G4",
+    "response": ["Pandangan yang suram dan pesimistis dapat menyebabkan peningkatan tingkat stres, kecemasan, dan depresi. Hal ini juga dapat mengurangi motivasi dan mempengaruhi kemampuan seseorang untuk membuat keputusan yang sehat dan positif."]
+  },
+  {
+    "patterns": ["Apa saja faktor yang mempengaruhi seseorang untuk melihat masa depan dengan cara yang suram dan pesimistis?"],
+    "intent": "pertanyaan_informasi_G4",
+    "response": ["Faktor-faktor tersebut termasuk kondisi ekonomi yang sulit, hubungan interpersonal yang buruk, kesehatan fisik yang menurun, pengalaman traumatis, dan paparan terus-menerus terhadap berita atau informasi negatif."]
+  },
+  {
+    "patterns": ["Bagaimana cara pandang yang suram dan pesimistis dapat mempengaruhi keputusan seseorang?"],
+    "intent": "pertanyaan_informasi_G4",
+    "response": ["Pandangan yang suram dan pesimistis dapat menyebabkan seseorang mengambil keputusan yang lebih berhati-hati atau bahkan menghindari mengambil keputusan sama sekali. Ini bisa menghambat pertumbuhan pribadi dan profesional serta menyebabkan perasaan stagnasi."]
+  },
+  {
+    "patterns": ["Apakah ada perbedaan antara pandangan masa depan yang suram dan pesimistis pada berbagai kelompok umur atau budaya?"],
+    "intent": "pertanyaan_informasi_G4",
+    "response": ["Ya, perbedaan dalam pandangan masa depan bisa muncul berdasarkan kelompok umur atau budaya. Misalnya, kelompok usia yang lebih muda mungkin lebih optimis tentang masa depan mereka dibandingkan dengan kelompok usia yang lebih tua. Selain itu, beberapa budaya mungkin lebih cenderung untuk memiliki pandangan yang optimis atau pesimistis tergantung pada nilai-nilai dan pengalaman kolektif mereka."]
+  },
+  {
+    "patterns": ["Bagaimana media atau lingkungan sosial berperan dalam membentuk pandangan masa depan yang suram dan pesimistis?"],
+    "intent": "pertanyaan_informasi_G4",
+    "response": ["Media dan lingkungan sosial dapat mempengaruhi pandangan seseorang dengan terus-menerus menyoroti berita-berita negatif atau menyebarkan informasi yang pesimistis. Lingkungan yang suportif dan optimis dapat membantu seseorang mengembangkan pandangan yang lebih positif."]
+  },
+  {
+    "patterns": ["Apakah ada strategi atau teknik yang dapat digunakan untuk mengubah pandangan masa depan dari suram dan pesimistis menjadi lebih optimis?"],
+    "intent": "pertanyaan_informasi_G4",
+    "response": ["Ya, beberapa strategi termasuk praktik syukur, meditasi, mindfulness, mengembangkan tujuan jangka pendek yang realistis, serta mencari dukungan dari komunitas atau profesional kesehatan mental."]
+  },
+  {
+    "patterns": ["Bagaimana pengaruh pengalaman hidup terhadap pandangan masa depan yang suram dan pesimistis?"],
+    "intent": "pertanyaan_informasi_G4",
+    "response": ["Pengalaman hidup yang negatif, seperti kehilangan pekerjaan, trauma, atau kegagalan, dapat mempengaruhi seseorang untuk melihat masa depan secara suram dan pesimistis. Sebaliknya, pengalaman positif dapat membantu mengembangkan pandangan yang lebih optimis dan penuh harapan."]
+  },
+  {
+    "patterns": ["Saya merasa sangat khawatir tentang masa depan."],
+    "intent": "diagnosa_G4",
+    "response": ["Kekhawatiran tentang masa depan bisa menjadi tanda gangguan kecemasan. Cobalah teknik relaksasi dan bicarakan dengan profesional kesehatan mental jika kecemasan berlanjut."]
+  },
+  {
+    "patterns": ["Saya merasa sangat putus asa dan tidak ada harapan."],
+    "intent": "diagnosa_G4",
+    "response": ["Perasaan putus asa dan tidak ada harapan bisa menjadi tanda depresi. Pertimbangkan untuk berbicara dengan seseorang yang Anda percayai dan mencari bantuan profesional."]
+  },
+  {
+    "patterns": ["Apa yang menyebabkan pandangan masa depan menjadi suram dan pesimistis?"],
+    "intent": "diagnosa_G4",
+    "response": ["Pandangan masa depan yang suram dan pesimistis dapat disebabkan oleh berbagai faktor, termasuk pengalaman hidup yang negatif, ketidakpastian ekonomi, tantangan kesehatan mental, dan pengaruh media yang sering menyoroti aspek-aspek negatif dari dunia. Apakah ada kejadian atau situasi tertentu belakangan ini yang membuat anda merasa pandangan masa depan anda suram dan pesimistis?"]
+  },
+  {
+    "patterns": ["Dokter, saya merasa tidak ada harapan untuk masa depan saya. Saya merasa semuanya akan terus memburuk."],
+    "intent": "diagnosa_G4",
+    "response": ["Saya sangat memahami perasaan Anda. Perasaan putus asa tentang masa depan adalah tanda umum dari depresi. Apakah Anda bisa memberi tahu saya kapan perasaan ini mulai muncul? Apakah ada peristiwa tertentu yang mungkin memicunya?"]
+  },
+  {
+    "patterns": ["Saya tidak bisa membayangkan masa depan yang bahagia. Saya merasa pesimistis tentang segala hal dan merasa tidak ada yang akan berubah menjadi lebih baik."],
+    "intent": "diagnosa_G4",
+    "response": ["Merasa pesimistis tentang masa depan bisa sangat menguras emosi. Ini adalah gejala umum dari depresi. Bagaimana perasaan Anda sehari-hari? Apakah ada sesuatu yang bisa membuat Anda merasa lebih baik, meskipun hanya sebentar?"]
+  },
+  {
+    "patterns": ["Saya merasa seperti semua usaha yang saya lakukan sia-sia. Saya tidak bisa melihat masa depan yang cerah, dan itu membuat saya sangat tertekan."],
+    "intent": "diagnosa_G4",
+    "response": ["Merasa seperti usaha Anda sia-sia dan tidak bisa melihat masa depan yang cerah adalah perasaan yang sangat berat. Saya ingin membantu Anda menemukan cara untuk menghadapi perasaan ini. Apakah ada orang di sekitar Anda yang bisa memberikan dukungan emosional?"]
+  },
+  {
+    "patterns": ["Saya merasa bahwa hidup saya tidak akan pernah membaik. Saya tidak punya motivasi untuk melakukan apapun karena saya merasa semuanya sia-sia."],
+    "intent": "diagnosa_G4",
+    "response": ["Kehilangan motivasi dan merasa bahwa hidup tidak akan pernah membaik adalah tanda penting dari depresi. Bagaimana suasana hati Anda sehari-hari? Apakah ada aktivitas atau hobi yang sebelumnya Anda nikmati tapi sekarang tidak lagi?"]
+  },
+  {
+    "patterns": ["Saya merasa tidak ada masa depan yang positif bagi saya. Semua rencana dan harapan saya sepertinya tidak akan pernah terwujud."],
+    "intent": "diagnosa_G4",
+    "response": ["Perasaan bahwa rencana dan harapan tidak akan terwujud adalah perasaan yang sangat sulit dihadapi. Saya ingin kita bekerja sama untuk mencari cara agar Anda bisa merasa lebih optimis tentang masa depan. Apakah Anda bersedia membicarakan lebih lanjut tentang perasaan ini dan mungkin mencoba beberapa teknik untuk membantu?\nG5 ( gagasan atau perbuatan yang membahayakan diri atau bunuh diri.)"]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan gagasan membahayakan diri?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Gagasan membahayakan diri merujuk pada pemikiran atau dorongan untuk melakukan tindakan yang dapat menyebabkan cedera fisik pada diri sendiri, seperti memotong, membakar, atau memukul diri sendiri."]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan gagasan bunuh diri?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Gagasan bunuh diri adalah pemikiran atau dorongan untuk mengakhiri hidup sendiri. Ini bisa mencakup rencana, niat, atau bahkan percobaan untuk bunuh diri."]
+  },
+  {
+    "patterns": ["Apa saja penyebab umum dari gagasan atau perbuatan yang membahayakan diri atau bunuh diri?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Penyebab umum termasuk kondisi kesehatan mental seperti depresi, gangguan kecemasan, PTSD, gangguan bipolar, penyalahgunaan zat, trauma masa lalu, perasaan putus asa, dan isolasi sosial."]
+  },
+  {
+    "patterns": ["Bagaimana gagasan atau perbuatan yang membahayakan diri atau bunuh diri mempengaruhi kehidupan sehari-hari seseorang?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Gagasan atau perbuatan ini dapat menyebabkan isolasi sosial, penurunan produktivitas, gangguan hubungan interpersonal, serta memicu rasa cemas dan ketakutan yang mendalam. Mereka juga dapat menyebabkan cedera fisik yang serius atau kematian."]
+  },
+  {
+    "patterns": ["Apa tanda-tanda bahwa seseorang mungkin memiliki gagasan atau perbuatan yang membahayakan diri atau bunuh diri?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Tanda-tanda termasuk berbicara tentang keinginan untuk mati atau bunuh diri, mencari cara untuk mengakhiri hidup, merasa putus asa atau tidak berharga, menarik diri dari kegiatan sosial, memberikan barang-barang pribadi, serta perubahan perilaku atau suasana hati yang drastis."]
+  },
+  {
+    "patterns": ["Bagaimana cara mengatasi gagasan atau perbuatan yang membahayakan diri atau bunuh diri?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Cara mengatasi termasuk mencari bantuan dari profesional kesehatan mental, berbicara dengan teman atau keluarga, mengembangkan strategi coping yang sehat, menghindari penggunaan zat berbahaya, serta mungkin memerlukan pengobatan atau terapi yang lebih intensif."]
+  },
+  {
+    "patterns": ["Apakah gagasan atau perbuatan yang membahayakan diri atau bunuh diri selalu menunjukkan masalah kesehatan mental yang serius?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Ya, gagasan atau perbuatan yang membahayakan diri atau bunuh diri biasanya menunjukkan adanya masalah kesehatan mental yang serius dan membutuhkan perhatian segera dari profesional."]
+  },
+  {
+    "patterns": ["Bagaimana seseorang dapat membantu teman atau anggota keluarga yang mengalami gagasan atau perbuatan yang membahayakan diri atau bunuh diri?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Menawarkan dukungan dan mendengarkan tanpa menghakimi, mendorong mereka untuk mencari bantuan profesional, menghapus atau mengamankan benda-benda yang dapat digunakan untuk menyakiti diri, dan tidak meninggalkan mereka sendirian jika mereka berada dalam bahaya langsung."]
+  },
+  {
+    "patterns": ["Apa dampak jangka panjang dari gagasan atau perbuatan yang membahayakan diri atau bunuh diri jika tidak diatasi?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Dampak jangka panjang dapat termasuk cedera fisik permanen, gangguan kesehatan mental yang semakin parah, masalah dalam hubungan interpersonal, penurunan kualitas hidup, dan risiko kematian akibat bunuh diri."]
+  },
+  {
+    "patterns": ["Kapan sebaiknya seseorang mencari bantuan profesional untuk masalah gagasan atau perbuatan yang membahayakan diri atau bunuh diri?"],
+    "intent": "pertanyaan_informasi_G5",
+    "response": ["Seseorang harus segera mencari bantuan profesional jika mereka atau seseorang yang mereka kenal memiliki gagasan atau perbuatan yang membahayakan diri atau bunuh diri, terutama jika mereka memiliki rencana atau niat konkret untuk melakukannya. Ini adalah keadaan darurat yang memerlukan intervensi segera."]
+  },
+  {
+    "patterns": ["Dokter, saya sering berpikir bahwa hidup ini tidak ada artinya lagi. Saya merasa lebih baik jika saya tidak ada di sini."],
+    "intent": "diagnosa_G5",
+    "response": ["Saya sangat prihatin mendengar Anda merasa seperti ini. Pikiran tentang bunuh diri atau merasa bahwa hidup tidak ada artinya adalah tanda serius dari depresi. Saya ingin membantu Anda segera. Apakah Anda memiliki rencana atau niat tertentu untuk melukai diri sendiri? Apakah Anda merasa aman saat ini?"]
+  },
+  {
+    "patterns": ["Saya merasa sangat putus asa dan sering berpikir bahwa bunuh diri adalah satu-satunya jalan keluar dari rasa sakit ini."],
+    "intent": "diagnosa_G5",
+    "response": ["Pikiran tentang bunuh diri adalah hal yang sangat serius dan saya ingin memastikan bahwa Anda mendapatkan bantuan yang Anda butuhkan. Apakah Anda bisa memberi tahu saya lebih banyak tentang seberapa sering Anda memiliki pikiran ini? Apakah ada sesuatu yang memicu perasaan ini?"]
+  },
+  {
+    "patterns": ["Kadang-kadang saya merasa sangat tertekan sehingga saya ingin melukai diri sendiri. Rasanya seperti itu satu-satunya cara untuk mengurangi rasa sakit yang saya rasakan."],
+    "intent": "diagnosa_G5",
+    "response": ["Saya sangat prihatin mendengar bahwa Anda merasa ingin melukai diri sendiri. Ini adalah tanda bahwa kita perlu mencari cara untuk membantu Anda segera. Apakah Anda pernah mencoba melukai diri sendiri sebelumnya? Apakah ada sesuatu yang membantu Anda merasa lebih baik, meskipun hanya sedikit?"]
+  },
+  {
+    "patterns": ["Saya tidak bisa berhenti berpikir bahwa hidup saya tidak berharga dan bahwa semua orang akan lebih baik tanpa saya."],
+    "intent": "diagnosa_G5",
+    "response": ["Merasa bahwa hidup Anda tidak berharga dan bahwa orang lain akan lebih baik tanpa Anda adalah perasaan yang sangat menyakitkan dan serius. Saya ingin memastikan bahwa Anda aman dan mendapatkan bantuan yang tepat. Apakah Anda sudah berbicara dengan orang lain tentang perasaan ini? Apakah ada seseorang yang bisa mendukung Anda saat ini?"]
+  },
+  {
+    "patterns": ["Ada saat-saat ketika saya berpikir tentang cara-cara untuk mengakhiri hidup saya. Ini sangat menakutkan, tetapi saya merasa tidak bisa menghentikannya."],
+    "intent": "diagnosa_G5",
+    "response": ["Pikiran tentang cara-cara untuk mengakhiri hidup adalah tanda yang sangat serius dari depresi. Saya sangat ingin memastikan bahwa Anda mendapatkan bantuan yang Anda butuhkan segera. Apakah Anda memiliki rencana yang spesifik? Apakah Anda merasa aman saat ini?\nG6 ( tidur terganggu )"]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan tidur terganggu?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Tidur terganggu merujuk pada masalah yang dialami seseorang dalam memulai atau mempertahankan tidur, sering terbangun di malam hari, atau bangun terlalu pagi dan tidak bisa kembali tidur."]
+  },
+  {
+    "patterns": ["Apa saja penyebab umum dari tidur terganggu?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Penyebab umum termasuk stres, kecemasan, depresi, kebiasaan tidur yang buruk, konsumsi kafein atau alkohol sebelum tidur, gangguan tidur seperti insomnia atau sleep apnea, serta kondisi medis lainnya."]
+  },
+  {
+    "patterns": ["Bagaimana tidur terganggu mempengaruhi kehidupan sehari-hari?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Tidur terganggu dapat menyebabkan kelelahan, kesulitan berkonsentrasi, perubahan suasana hati, penurunan produktivitas, dan peningkatan risiko kecelakaan. Dalam jangka panjang, hal ini juga dapat mempengaruhi kesehatan fisik dan mental secara keseluruhan."]
+  },
+  {
+    "patterns": ["Apa tanda-tanda bahwa seseorang mengalami tidur terganggu?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Tanda-tanda termasuk kesulitan jatuh tidur, sering terbangun di malam hari, merasa tidak segar saat bangun tidur, mengantuk di siang hari, dan ketergantungan pada obat tidur atau stimulan untuk berfungsi normal."]
+  },
+  {
+    "patterns": ["Bagaimana cara mengatasi masalah tidur terganggu?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Beberapa cara termasuk menjaga jadwal tidur yang konsisten, menciptakan lingkungan tidur yang nyaman, menghindari kafein dan alkohol sebelum tidur, berolahraga secara teratur, mengelola stres, serta mungkin berkonsultasi dengan dokter atau ahli tidur jika masalah berlanjut."]
+  },
+  {
+    "patterns": ["Apakah tidur terganggu selalu menunjukkan masalah kesehatan yang serius?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Tidak selalu. Tidur terganggu bisa disebabkan oleh faktor sementara seperti stres atau perubahan rutinitas. Namun, jika masalah tidur berlangsung lama atau mengganggu kehidupan sehari-hari, mungkin ada kondisi medis atau psikologis yang mendasarinya yang memerlukan perhatian."]
+  },
+  {
+    "patterns": ["Bagaimana seseorang dapat membantu teman atau anggota keluarga yang mengalami tidur terganggu?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Menawarkan dukungan emosional, membantu mereka menciptakan rutinitas tidur yang sehat, mendorong mereka untuk menghindari stimulan sebelum tidur, serta mungkin menyarankan mereka untuk mencari bantuan profesional jika masalah berlanjut."]
+  },
+  {
+    "patterns": ["Apa dampak jangka panjang dari tidur terganggu jika tidak diatasi?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Dampak jangka panjang dapat termasuk penurunan sistem kekebalan tubuh, peningkatan risiko penyakit kronis seperti diabetes dan penyakit jantung, gangguan kesehatan mental seperti depresi dan kecemasan, serta penurunan kualitas hidup secara keseluruhan."]
+  },
+  {
+    "patterns": ["Kapan sebaiknya seseorang mencari bantuan profesional untuk masalah tidur terganggu?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Seseorang sebaiknya mencari bantuan profesional jika mereka mengalami masalah tidur yang berlangsung lebih dari beberapa minggu, terutama jika ini mengganggu kehidupan sehari-hari mereka atau disertai dengan gejala lain seperti rasa cemas, depresi, atau kelelahan ekstrem."]
+  },
+  {
+    "patterns": ["Apa saja perubahan gaya hidup yang bisa membantu memperbaiki tidur terganggu?"],
+    "intent": "pertanyaan_informasi_G6",
+    "response": ["Perubahan gaya hidup yang bisa membantu termasuk menjaga jadwal tidur yang konsisten, menghindari layar elektronik sebelum tidur, berolahraga secara teratur tetapi tidak terlalu dekat dengan waktu tidur, menciptakan lingkungan tidur yang gelap dan tenang, serta menghindari makanan berat atau minuman berkafein sebelum tidur."]
+  },
+  {
+    "patterns": ["Saya tidak bisa tidur nyenyak dan sering terbangun di malam hari."],
+    "intent": "diagnosa_G6",
+    "response": ["Gangguan tidur bisa disebabkan oleh stres atau masalah kesehatan mental lainnya. Cobalah untuk menciptakan rutinitas tidur yang baik dan konsultasikan dengan dokter jika masalah berlanjut."]
+  },
+  {
+    "patterns": ["Dokter, saya mengalami kesulitan tidur hampir setiap malam. Saya sering terbangun di tengah malam dan sulit untuk kembali tidur."],
+    "intent": "diagnosa_G6",
+    "response": ["Saya sangat prihatin mendengar bahwa Anda mengalami kesulitan tidur. Gangguan tidur seperti ini sering kali terkait dengan depresi. Apakah Anda merasa cemas atau memiliki pikiran yang mengganggu saat mencoba tidur? Bagaimana perasaan Anda secara keseluruhan di siang hari?"]
+  },
+  {
+    "patterns": ["Saya merasa sangat lelah sepanjang waktu karena saya tidak bisa tidur nyenyak di malam hari. Ini membuat saya merasa semakin tertekan."],
+    "intent": "diagnosa_G6",
+    "response": ["Merasa lelah dan tidak bisa tidur nyenyak adalah gejala umum dari depresi. Apakah ada sesuatu yang biasanya membantu Anda tidur lebih baik? Bagaimana dengan rutinitas tidur Anda, apakah ada yang berubah belakangan ini?"]
+  },
+  {
+    "patterns": ["Saya sering terbangun terlalu pagi dan tidak bisa tidur lagi, meskipun saya masih sangat lelah."],
+    "intent": "diagnosa_G6",
+    "response": ["Terbangun terlalu pagi dan tidak bisa tidur lagi adalah masalah yang sering terjadi pada orang yang mengalami depresi. Apakah Anda merasa gelisah atau khawatir ketika terbangun? Bagaimana perasaan Anda di pagi hari setelah bangun?"]
+  },
+  {
+    "patterns": ["Saya bisa tidur, tapi tidurnya tidak nyenyak dan saya sering bermimpi buruk. Ini membuat saya merasa lebih lelah saat bangun."],
+    "intent": "diagnosa_G6",
+    "response": ["Mimpi buruk dan tidur yang tidak nyenyak bisa sangat mengganggu dan memperburuk gejala depresi. Apakah Anda bisa menceritakan lebih banyak tentang mimpi buruk yang Anda alami? Apakah ada pola tertentu yang Anda perhatikan?"]
+  },
+  {
+    "patterns": ["Saya merasa sangat sulit untuk memulai tidur. Saya bisa berbaring di tempat tidur selama berjam-jam tanpa bisa tidur."],
+    "intent": "diagnosa_G6",
+    "response": ["Kesulitan untuk memulai tidur adalah masalah umum yang sering dialami oleh orang dengan depresi. Apakah ada sesuatu yang biasanya membantu Anda rileks sebelum tidur? Bagaimana dengan kebiasaan Anda sebelum tidur, apakah Anda sering menggunakan perangkat elektronik atau mengonsumsi kafein?\nG7 ( nafsu makan berkurang. )"]
+  },
+  {
+    "patterns": ["Apa yang dimaksud dengan nafsu makan berkurang?"],
+    "intent": "pertanyaan_informasi_G7",
+    "response": ["Nafsu makan berkurang merujuk pada kondisi di mana seseorang mengalami penurunan keinginan atau ketertarikan untuk makan, sering kali disertai dengan penurunan asupan makanan dan kadang-kadang penurunan berat badan."]
+  },
+  {
+    "patterns": ["Apa saja penyebab umum dari nafsu makan berkurang?"],
+    "intent": "pertanyaan_informasi_G7",
+    "response": ["Penyebab umum termasuk stres, kecemasan, depresi, infeksi atau penyakit fisik, efek samping obat, gangguan pencernaan, kelelahan, perubahan hormonal, serta masalah medis seperti kanker atau penyakit kronis."]
+  },
+  {
+    "patterns": ["Bagaimana nafsu makan berkurang mempengaruhi kehidupan sehari-hari?"],
+    "intent": "pertanyaan_informasi_G7",
+    "response": ["Nafsu makan berkurang dapat menyebabkan penurunan energi, kelemahan, penurunan berat badan yang tidak sehat, malnutrisi, serta penurunan kemampuan untuk melakukan aktivitas sehari-hari dengan efektif."]
+  },
+  {
+    "patterns": ["Apa tanda-tanda bahwa seseorang mengalami nafsu makan berkurang?"],
+    "intent": "pertanyaan_informasi_G7",
+    "response": ["Tanda-tanda termasuk tidak merasa lapar pada waktu makan, makan dalam porsi yang sangat kecil, merasa mual saat melihat atau mencium makanan, penurunan berat badan, serta kelelahan atau kelemahan yang berlebihan."]
+  },
+  {
+    "patterns": ["Apakah nafsu makan berkurang selalu menunjukkan masalah kesehatan yang serius?"],
+    "intent": "pertanyaan_informasi_G7",
+    "response": ["Tidak selalu. Nafsu makan berkurang bisa disebabkan oleh faktor sementara seperti stres atau infeksi ringan. Namun, jika masalah ini berlangsung lama atau disertai dengan gejala lain yang mengkhawatirkan, mungkin ada kondisi medis atau psikologis yang mendasarinya yang memerlukan perhatian."]
+  },
+  {
+    "patterns": ["Bagaimana seseorang dapat membantu teman atau anggota keluarga yang mengalami nafsu makan berkurang?"],
+    "intent": "pertanyaan_informasi_G7",
+    "response": ["Menawarkan makanan yang disukai dalam porsi kecil, mendorong mereka untuk makan secara teratur, menciptakan suasana makan yang menyenangkan, dan mungkin menyarankan mereka untuk mencari bantuan profesional jika masalah berlanjut."]
+  },
+  {
+    "patterns": ["Apa dampak jangka panjang dari nafsu makan berkurang jika tidak diatasi?"],
+    "intent": "pertanyaan_informasi_G7",
+    "response": ["Dampak jangka panjang dapat termasuk penurunan berat badan yang berlebihan, malnutrisi, kelemahan fisik, penurunan sistem kekebalan tubuh, serta peningkatan risiko penyakit kronis."]
+  },
+  {
+    "patterns": ["Kapan sebaiknya seseorang mencari bantuan profesional untuk masalah nafsu makan berkurang?"],
+    "intent": "pertanyaan_informasi_G7",
+    "response": ["Seseorang sebaiknya mencari bantuan profesional jika mereka mengalami nafsu makan berkurang yang berlangsung lebih dari beberapa minggu, terutama jika ini menyebabkan penurunan berat badan yang signifikan atau disertai dengan gejala lain seperti kelelahan ekstrem atau masalah kesehatan lainnya."]
+  },
+  {
+    "patterns": ["Apa saja perubahan gaya hidup yang bisa membantu memperbaiki nafsu makan berkurang?"],
+    "intent": "pertanyaan_informasi_G7",
+    "response": ["Perubahan gaya hidup yang bisa membantu termasuk makan dalam porsi kecil tetapi sering, memilih makanan bergizi dan menarik secara visual, menjaga hidrasi, menghindari stres, berolahraga secara teratur, serta memastikan cukup istirahat dan tidur."]
+  },
+  {
+    "patterns": ["Dokter, belakangan ini saya merasa tidak nafsu makan sama sekali. Saya bahkan tidak merasa lapar, dan makanan yang saya makan terasa tidak enak."],
+    "intent": "diagnosa_G7",
+    "response": ["Saya sangat prihatin mendengar bahwa Anda mengalami penurunan nafsu makan. Kehilangan nafsu makan adalah gejala umum dari depresi. Apakah ada waktu tertentu ketika Anda merasa lebih sulit untuk makan? Apakah Anda juga mengalami penurunan berat badan?"]
+  },
+  {
+    "patterns": ["Saya tidak bisa makan dengan baik dan berat badan saya turun."],
+    "intent": "diagnosa_G7",
+    "response": ["Perubahan nafsu makan dan penurunan berat badan bisa menjadi tanda depresi. Sebaiknya Anda berbicara dengan profesional kesehatan untuk evaluasi lebih lanjut."]
+  },
+  {
+    "patterns": ["Saya sering melewatkan waktu makan karena saya merasa tidak tertarik pada makanan. Saya hanya tidak merasa ingin makan."],
+    "intent": "diagnosa_G7",
+    "response": ["Melewatkan waktu makan dan tidak tertarik pada makanan bisa menjadi tanda depresi. Bagaimana dengan energi Anda sehari-hari? Apakah Anda merasa lelah atau lesu lebih sering daripada biasanya?"]
+  },
+  {
+    "patterns": ["Saya merasa mual setiap kali mencoba makan, dan ini membuat saya tidak ingin makan sama sekali."],
+    "intent": "diagnosa_G7",
+    "response": ["Merasa mual ketika mencoba makan bisa sangat mengganggu dan merupakan gejala yang perlu ditangani. Apakah ada makanan tertentu yang membuat Anda merasa lebih mual? Bagaimana dengan pola makan Anda sebelumnya, apakah ada perubahan signifikan?"]
+  },
+  {
+    "patterns": ["Saya tidak punya selera makan, bahkan untuk makanan yang biasanya saya sukai. Saya merasa tidak ada yang menarik atau enak untuk dimakan."],
+    "intent": "diagnosa_G7",
+    "response": ["Kehilangan selera makan untuk makanan yang biasanya Anda sukai adalah tanda yang sering terlihat pada depresi. Apakah Anda mengalami perubahan berat badan atau merasa lebih lemah dari biasanya? Bagaimana perasaan Anda secara keseluruhan?"]
+  },
+  {
+    "patterns": ["Saya hanya makan karena saya tahu saya harus makan, bukan karena saya merasa lapar atau menikmati makanan."],
+    "intent": "diagnosa_G7",
+    "response": ["Makan karena merasa harus makan dan bukan karena lapar atau menikmati makanan adalah hal yang bisa terjadi pada orang yang mengalami depresi. Bagaimana suasana hati Anda secara umum? Apakah ada perubahan lain dalam rutinitas atau kebiasaan Anda?\n---------------------------------------------------------------------------------------------------------------------------------"]
+  },
+  {
+    "patterns": ["Apa itu terapi kognitif?"],
+    "intent": "pertanyaan_informasi",
+    "response": ["Terapi kognitif adalah cara untuk membantu orang memahami bagaimana pikiran mereka mempengaruhi perasaan dan tindakan mereka sehari-hari. Ini melibatkan mengidentifikasi pikiran negatif atau tidak sehat yang bisa membuat stres atau kecemasan lebih buruk. Kemudian, terapis membantu orang untuk melihat ulang pikiran-pikiran ini dengan lebih realistis dan positif. Tujuannya adalah agar orang dapat belajar cara baru untuk menghadapi situasi sulit atau stres dengan lebih baik, sehingga mereka bisa merasa lebih baik dan lebih mampu mengatasi masalah dalam hidup mereka."]
+  },
+  {
+    "patterns": ["Apakah terapi kognitif cocok untuk pasien depresi?"],
+    "intent": "pertanyaan_informasi",
+    "response": ["Terapi kognitif (CBT) sangat cocok untuk pasien depresi karena membantu mengubah pola pikiran negatif, mengelola perasaan sedih, mengembangkan keterampilan penyesuaian diri, meningkatkan pemahaman tentang gejala depresi, dan memiliki efektivitas yang terbukti dalam mengurangi gejala dan mencegah kekambuhan depresi."]
+  },
+  {
+    "patterns": ["Contoh terapi kognitif?"],
+    "intent": "pertanyaan_informasi",
+    "response": ["Terapi kognitif melibatkan langkah-langkah seperti mengidentifikasi pikiran negatif, mengevaluasi dan menggantinya dengan pikiran yang lebih realistis, merencanakan tindakan yang adaptif, menguji pikiran baru dalam kehidupan sehari-hari, dan mengembangkan strategi pencegahan kekambuhan. Ini membantu klien mengelola stres dan masalah emosional dengan lebih baik."]
+  },
+  {
+    "patterns": ["Apa yang harus saya lakukan jika saya merasa sangat tertekan?"],
+    "intent": "pertanyaan_informasi",
+    "response": ["Merasa tertekan bisa menjadi tanda depresi. Penting untuk berbicara dengan profesional kesehatan mental untuk mendapatkan dukungan dan perawatan yang tepat."]
+  }
+  ]
